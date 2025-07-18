@@ -1,0 +1,38 @@
+name: dynamic_app_icon
+description: A system for generating themed app icons
+
+# Configuration for themed app icons
+themed_icons:
+  red_velvet:
+    background_color: "#8B2635"
+    icon_name: "launcher_icon_red_velvet"
+  royal_blue:
+    background_color: "#4169E1"
+    icon_name: "launcher_icon_royal_blue"
+  emerald_green:
+    background_color: "#50C878"
+    icon_name: "launcher_icon_emerald_green"
+  purple_majesty:
+    background_color: "#6A0DAD"
+    icon_name: "launcher_icon_purple_majesty"
+  sunset_orange:
+    background_color: "#FF6347"
+    icon_name: "launcher_icon_sunset_orange"
+  forest_green:
+    background_color: "#228B22"
+    icon_name: "launcher_icon_forest_green"
+  deep_pink:
+    background_color: "#FF1493"
+    icon_name: "launcher_icon_deep_pink"
+  midnight_blue:
+    background_color: "#191970"
+    icon_name: "launcher_icon_midnight_blue"
+  golden_yellow:
+    background_color: "#FFD700"
+    icon_name: "launcher_icon_golden_yellow"
+  crimson_red:
+    background_color: "#DC143C"
+    icon_name: "launcher_icon_crimson_red"
+  piano_black:
+    background_color: "#000000"
+    icon_name: "launcher_icon_piano_black"

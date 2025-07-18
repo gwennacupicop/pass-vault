@@ -1,0 +1,37 @@
+# Flutter Launcher Icons Configuration
+# This file contains multiple icon configurations for different themes
+
+# Default configuration
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#8B2635"  # Red Velvet
+  adaptive_icon_foreground: "assets/images/logo.png"
+
+# Theme-specific configurations
+# These would be used to generate multiple icon variants
+theme_icons:
+  red_velvet:
+    adaptive_icon_background: "#8B2635"
+  royal_blue:
+    adaptive_icon_background: "#4169E1"
+  emerald_green:
+    adaptive_icon_background: "#50C878"
+  purple_majesty:
+    adaptive_icon_background: "#6A0DAD"
+  sunset_orange:
+    adaptive_icon_background: "#FF6347"
+  forest_green:
+    adaptive_icon_background: "#228B22"
+  deep_pink:
+    adaptive_icon_background: "#FF1493"
+  midnight_blue:
+    adaptive_icon_background: "#191970"
+  golden_yellow:
+    adaptive_icon_background: "#FFD700"
+  crimson_red:
+    adaptive_icon_background: "#DC143C"
+  piano_black:
+    adaptive_icon_background: "#000000"
