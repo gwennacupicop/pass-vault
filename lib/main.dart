@@ -690,29 +690,44 @@ class _PasswordManagerHomeState extends State<PasswordManagerHome> {
               ],
             ),
           ),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: ThemeManager.themeColors.entries.map((entry) {
-              return ListTile(
-                leading: Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    color: entry.value,
-                    shape: BoxShape.circle,
+          content: SizedBox(
+            width: double.maxFinite,
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                maxHeight: MediaQuery.of(context).size.height * 0.6,
+              ),
+              child: Scrollbar(
+                thumbVisibility: true,
+                thickness: 8.0,
+                radius: const Radius.circular(4),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: ThemeManager.themeColors.entries.map((entry) {
+                      return ListTile(
+                        leading: Container(
+                          width: 24,
+                          height: 24,
+                          decoration: BoxDecoration(
+                            color: entry.value,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        title: Text(entry.key),
+                        trailing: selectedColor == entry.key ? const Icon(Icons.check) : null,
+                        onTap: () {
+                          setDialogState(() {
+                            selectedColor = entry.key;
+                          });
+                          widget.onThemeColorChange(entry.key);
+                          Navigator.pop(context);
+                        },
+                      );
+                    }).toList(),
                   ),
                 ),
-                title: Text(entry.key),
-                trailing: selectedColor == entry.key ? const Icon(Icons.check) : null,
-                onTap: () {
-                  setDialogState(() {
-                    selectedColor = entry.key;
-                  });
-                  widget.onThemeColorChange(entry.key);
-                  Navigator.pop(context);
-                },
-              );
-            }).toList(),
+              ),
+            ),
           ),
         ),
       ),
