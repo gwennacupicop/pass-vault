@@ -1,6 +1,6 @@
-# password_manager
+# Pass Vault
 
-A new Flutter project.
+A password manager Flutter project.
 
 ## Getting Started
 
